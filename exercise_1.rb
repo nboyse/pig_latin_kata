@@ -11,8 +11,19 @@
 # Assume your user is a developer — e.g. you don't need to write a user interface.
 
 def pig_latin(word)
+  if word.chr == "a" || word.chr == "e" || word.chr == "i" || word.chr == "o" || word.chr == "u"
+    word + "way"
+  else
+    word << word.chr + "ay"
+    word[1..-1]
+  end
+
 
 end
+
+pig_latin("dog")
+pig_latin("up")
+
 
 ## Tests:
 
