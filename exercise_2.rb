@@ -8,8 +8,20 @@
 # Still assume the words are lowercase.
 
 def pig_latin(word)
+  if word.chr =~ /[aeiou]/
+     word + "way"
 
+  else while word =~ /\A[^aeiou]/
+    word =  "#{word[1..-1]}#{word[0..0]}"
+    if word.chr =~ /[aeiou]/
+    end
+  end
+    word + "ay"
 end
+end
+
+puts pig_latin("sprinkle")
+puts pig_latin("up")
 
 ## Tests:
 
